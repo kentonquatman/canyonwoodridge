@@ -19,5 +19,5 @@ _thumbs/
 */expressionengine/cache/*
 
 # Directories
-_database/
-_plugins/
+development/_database/
+development/_plugins/
