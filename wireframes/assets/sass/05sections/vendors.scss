@@ -1,0 +1,78 @@
+/**************************************************
+ VENDORS SECTION STYLES
+**************************************************/
+
+#vendors {
+  .main {
+    .inner {
+      position: relative;
+    }
+  }
+}
+
+.vendor-list {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  @include break-up($small){
+    width: 105%;
+    margin-left: -5%;
+  }
+  @include break-up($medium){
+    width: 103.33%;
+    margin-left: -3.33%;
+  }
+  @include break-up($large){
+    width: 102.5%;
+    margin-left: -2.5%;
+  }
+  li {
+    margin: 0 0 1em;
+    @include break-up($small){
+      @include float;
+      margin: 2.5% 0 2.5% 5%;
+      width: 45%;
+    }
+    @include break-up($medium){
+      width: 30%;
+      margin: 1.66% 0 1.66% 3.33%;
+    }
+    @include break-up($large){
+      width: 22.5%;
+      margin: 1.25% 0 1.25% 2.5%;
+    }
+  }
+  a {
+    @include border-radius(.3em);
+    display: block;
+    padding: .75em 1em;
+    background-color: $gray;
+    color:  $white;
+    &:hover, 
+    &:focus {
+      background-color: $dk-gray;
+    }
+  }
+  h4, p {
+    margin: 0 0 .25em;
+  }
+}
+
+.filters {
+  @include font-size(16);
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+  @include break-up($small){
+    position: absolute;
+    top: 1em;
+    right: 0;
+    width: 47.5%;
+  }
+  @include break-up($medium){
+    width: 50%;
+  }
+  @include break-up($large){
+    width: 38%;
+  }
+}

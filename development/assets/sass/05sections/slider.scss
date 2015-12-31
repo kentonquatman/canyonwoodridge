@@ -1,0 +1,116 @@
+/**************************************************
+ SLIDE SHOW STYLES
+**************************************************/
+
+.slider {
+  position: relative;
+  padding: 0;
+  background: $slider-bg url("../img/backgrounds/slide-texture-bg.jpg") center center repeat;
+  @include break-up($large){
+    padding-top: 9em;
+  }
+}
+
+.slides {
+  @include font-size(10);
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  li {
+    margin: 0;
+  }
+  img {
+    @include box-shadow(0 0 20px transparentize($black, .5));
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    @include break-up(1500){
+      max-width: 1440px;
+    }
+  }
+}
+
+.flex-control-nav {
+  margin: 0;
+  padding: .9em $side-padding;
+  background-color: $slide-pager-bg;
+  text-align: center;
+  list-style: none;
+  li {
+    @include inline-block;
+    @include font-size(10);
+    margin: 0 1.5em;
+    @include break-up($medium){
+      margin-right: .75em;
+      margin-left: .75em;
+    }
+  }
+  a {
+    @include border-radius(50%);
+    display: block;
+    overflow: hidden;
+    height: 0;
+    width: 15px;
+    padding-top: 13px;
+    border: 1px solid $slide-marker;
+    @include break-up($medium){
+      width: 12px;
+      padding-top: 10px;
+    }
+    &:hover {
+      background-color: $slide-marker-hover;
+    }
+    &.flex-active {
+      background-color: $slide-marker-active;
+      border-color: $slide-marker-active;
+    }
+  }
+}
+
+.flex-direction-nav {
+  display: none;
+  list-style: none;
+  margin: 0;
+  @include break-up($medium){
+    display: block;
+  }
+  li {
+    @include font-size(10);
+    margin: 0;
+  }
+  a {
+    @include opacity(0);
+    @include border-radius(50%);
+    @include box-shadow(0 0 10px transparentize($black, .75));
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 5;
+    top: 47.5%;
+    height: 0;
+    width: 36px;
+    padding-top: 36px;
+    margin-top: -18px;
+    background-color: $slide-button-bg;
+    background-repeat: no-repeat;
+    @include hires("../img/sprites/arrow-sprite.png", "../img/sprites/arrow-sprite-2x.png");
+    @include break-up($large){
+      top: 55%;
+    }
+    &.flex-prev {
+      left: 3%;
+      background-position: 0 0;
+    }
+    &.flex-next {
+      right: 3%;
+      background-position: 0 -36px;
+    }
+    .slider:hover & {
+      @include opacity(.5);
+      &:hover {
+        @include opacity(1);
+      }
+    }
+  }
+}

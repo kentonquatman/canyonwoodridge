@@ -1,0 +1,76 @@
+/**************************************************
+ CONTACT PAGE STYLES
+**************************************************/
+
+#contact {
+  .main {
+    header {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    article {
+      margin-bottom: 4.5em;
+      padding-top: 1em;
+      border-top: 1px solid $border-color;
+    }
+    .contact-info {
+      @extend %sidebar;
+      @extend %sidebar-module;
+      padding: 2.5em 1em 2em;
+      text-align: center;
+      h3 {margin:0 0 1em}
+      address, p {
+        @include font-size(14);
+        margin: .25em 0;
+        @include break-up($small){@include font-size(16)}
+        @include break-up($medium){@include font-size(12)}
+        @include break-up($large){@include font-size(14)}
+      }
+    }
+  }
+}
+
+.map {
+  padding: 3em;
+  background-color: $sidebar-bg;
+  border: 1px solid $sidebar-border;
+  @include break-up($medium){@include float(right)}
+  iframe, 
+  figure {
+    height: 36em;
+    margin-bottom: 3em;
+    border: 1px solid $sidebar-border;
+    @include break-up($medium){height:52.3em}
+  }
+  &.no-captcha {
+    iframe, 
+    figure {
+      @include break-up($medium){height:40em}
+    }
+  }
+  figure {
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -285px;
+      margin-left: -350px;
+      width: auto;
+      max-width: none;
+    }
+  }
+  .button {@extend %lt-blue-button}
+}
+
+.contact-form {
+  margin-bottom: 3em;
+  @include break-up($medium){@include float;clear:both}
+}
+
+.map, .contact-form {
+  padding-top: 2.5em;
+  @include break-up($medium){width:48%}
+  h3 {margin:0 0 1em}
+}

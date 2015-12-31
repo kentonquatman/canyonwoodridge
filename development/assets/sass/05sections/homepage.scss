@@ -1,0 +1,32 @@
+/**************************************************
+ HOMEPAGE SPECIFIC STYLES
+**************************************************/
+
+#home {
+  .main {
+    padding-top: 6em;
+    background-image: none;
+    @include break-up($medium){padding-bottom:3em}
+    article {
+      @include reset-float;
+      max-width: 90em;
+      width: auto;
+      margin: 0 auto;
+      @include break-up($medium){
+        padding-bottom: 12em;
+        background: url("../img/backgrounds/tree-bg-01.jpg") center bottom no-repeat;
+      }
+    }
+    h1 {
+      margin: 0 0 .75em;
+      padding-bottom: .625em;
+      border-bottom: 1px solid $border-color;
+      text-align: center;
+    }
+    .button {
+      @extend %dk-transparent-button;
+      max-width: 20em;
+      margin: 2em auto 0;
+    }
+  }
+}

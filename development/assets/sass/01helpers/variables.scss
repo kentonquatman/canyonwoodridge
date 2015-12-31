@@ -1,0 +1,209 @@
+/**************************************************
+ FONT STACKS
+**************************************************/
+
+$sans-serif: "Helvetica Neue", Helmet, Freesans, sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: "courier new", monospace, serif;
+
+$playfair: 'Playfair Display', $serif;
+$lora: 'Lora', $serif;
+
+/**************************************************
+ FONT USAGE
+**************************************************/
+
+$body-font: $lora;
+$headline-font: $playfair;
+$button-font: $playfair;
+$code-font: $monospace;
+
+/**************************************************
+ COLOR PALETTE
+**************************************************/
+
+/* Brand Colors */
+
+$x-lt-blue: #edf1f5;
+$lt-blue: #a3c7d9;
+$dk-blue: #394f5a;
+$lt-brown: #b3a8a1;
+$brown: #66473d;
+$lt-cream: #faf8f5;
+$cream: #f2eee6;
+$black: #293033;
+
+/* Site Colors */
+
+$red: #e66045;
+
+/* Tones */
+
+$dk-gray: #404040;
+$gray: #808080;
+$lt-gray: #bfbfbf;
+$x-lt-gray: #e6e6e6;
+$white: #fff;
+
+/**************************************************
+ COLOR USAGE
+**************************************************/
+
+/* Base Colors */
+
+$selection-bg: transparentize($lt-blue, 0.5);
+$selection-text: $dk-blue;
+$border-color: #eef0eb;
+$main-bg: $white;
+$body-text: $black;
+$headline-text: $dk-blue;
+
+/* Link Colors */
+
+$link-color: darken($lt-blue, 10%);
+$link-hover: darken($lt-blue, 20%);
+
+/* Button Colors */
+
+$button-bg: $lt-blue;
+$button-text: $white;
+
+/* Module Colors */
+
+$module-bg: $lt-cream;
+$module-border: darken($lt-cream, 10%);
+
+/* Form Colors */
+
+$form-subhead-text: $lt-gray;
+$form-subhead-time: $brown;
+$form-required: $red;
+$form-errors: $red;
+$form-bg: $module-bg;
+$form-border: $module-border;
+$input-field-bg: $white;
+$input-field-focus: lighten($lt-blue, 25%);
+$input-border-focus: $lt-blue;
+$captcha-box-bg: $x-lt-blue;
+$captcha-box-border: $lt-blue;
+$terms-box-bg: $white;
+
+/* Header Colors */
+
+$header-bg: $lt-cream;
+$header-border: $brown;
+
+/* Navigation Colors */
+
+$nav-toggle-text: $white;
+$nav-toggle-bg-one: $brown;
+$nav-toggle-bg-two: darken($brown, 10%);
+$nav-toggle-border: darken($brown, 15%);
+
+$narrow-nav-color: $cream;
+$narrow-nav-bg: $black;
+$narrow-nav-border: 1px solid darken($narrow-nav-bg, 5%);
+
+$narrow-subnav-color: $cream;
+$narrow-subnav-bg: lighten($narrow-nav-bg, 2.5%);
+$narrow-subnav-border: 1px solid darken($narrow-subnav-bg, 5%);
+
+$nav-link-color: $brown;
+$nav-link-hover: darken($lt-blue, 10%);
+$nav-divider: $cream;
+$sub-nav-bg: $lt-cream;
+$sub-nav-border: darken($sub-nav-bg, 7.5%);
+
+$directional-nav-bg: $cream;
+$directional-nav-border: darken($cream, 10%);
+$directional-nav-bg-hover: $x-lt-blue;
+$directional-nav-border-hover: $lt-blue;
+
+/* Home Page Colors */
+
+$slider-bg: darken($brown, 10%);
+$slide-pager-bg: $cream;
+$slide-marker: $lt-brown;
+$slide-marker-hover: $white;
+$slide-marker-active: $dk-blue;
+$slide-button-bg: $cream;
+$more-info-bg: $cream;
+
+/* Gallery Colors */
+
+$gallery-bg: $lt-cream;
+$gallery-border: $cream;
+$thumb-gallery-border: darken($cream, 5%);
+$thumb-gallery-image-bg: $white;
+$thumb-gallery-image-hover: $lt-blue;
+
+$fancybox-border: $white;
+$fancybox-error: $white;
+$fancybox-button: $dk-blue;
+$fancybox-button-hover: lighten($dk-blue, 15%);
+$fancybox-overlay-color: $dk-blue;
+$fancy-box-text: $white;
+$fancy-box-text-bg: $dk-gray;
+
+/* Calendar Colors */
+
+$calendar-header-bg: $lt-cream;
+$calendar-header-border: darken($lt-cream, 10%);
+$outside-date-text: $x-lt-gray;
+$outside-date-bg: $white;
+$outside-date-border: $x-lt-gray;
+$available-date-text: $dk-blue;
+$available-date-bg: $x-lt-blue;
+$available-date-border: darken($x-lt-blue, 15%);
+$available-date-bg-hover: lighten($lt-blue, 5%);
+$available-date-border-hover: $lt-blue;
+$unavailable-date-text: $brown;
+$unavailable-date-bg: $lt-brown;
+$unavailable-date-border: $brown;
+
+$price-table-text: $white;
+$price-table-odd: $lt-brown;
+$price-table-even: $gray;
+
+/* Vendors Colors */
+
+$select-box-bg: $x-lt-blue;
+$select-box-border: desaturate(darken($x-lt-blue, 10%), 25%);
+$select-box-arrow: $brown;
+$vendor-card-bg: $lt-cream;
+$vendor-card-border: darken($cream, 5%);
+$vendor-card-bg-hover: $x-lt-blue;
+$vendor-card-border-hover: darken($x-lt-blue, 15%);
+
+/* Side Bar Colors */
+
+$sidebar-bg: $module-bg;
+$sidebar-border: $module-border;
+
+/* Footer Colors */
+
+$footer-text: $cream;
+$footer-link: $lt-brown;
+$footer-hover: lighten($lt-brown, 10%);
+$footer-bg: $black;
+$footer-border: $lt-brown;
+$footer-narrow-divider: $dk-blue;
+$footer-button-color: $lt-cream;
+$footer-button-hover: darken($lt-cream,25%);
+
+/**************************************************
+ UNICODE CHARACTERS
+**************************************************/
+
+$vertical-bar: "\007C";
+$bullet: "\2022";
+$triangle-down: "\25BC";
+$triangle-up: "\25B2";
+
+/**************************************************
+ SITE SPECIFIC
+**************************************************/
+
+$base-size: 10;
+$side-padding: 5%;
+$fixed-top-padding: 15em;

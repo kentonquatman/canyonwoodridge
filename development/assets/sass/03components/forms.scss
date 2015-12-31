@@ -1,0 +1,162 @@
+/**************************************************
+ DEFAULT FORM STYLES
+**************************************************/
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+form {
+  padding: 3em;
+  border: 1px solid $form-border;
+  background-color: $form-bg;
+  .half {
+    @include break-up($small){
+      @include float;
+      width: 48%;
+      margin-right: 4%;
+    }
+  }
+  .quarter {
+    @include float;
+    width: 48%;
+    margin-right: 4%;
+    @include break-up($small){
+      width: 46%;
+      margin-right: 8%;
+    }
+  }
+  .whole {clear:left}
+  .alpha {clear:left}
+  .omega {margin-right:0}
+  p {
+    @include font-size(14);
+    margin: 0 0 .5em;
+    line-height: normal;
+  }
+  .errors {
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid $form-border;
+    h4 {
+      margin: -.25em .25em .75em;
+    }
+    ul {
+      margin-bottom: 0;
+      color: $form-errors;
+    }
+    li {
+      @include font-size(14);
+    }
+  }
+}
+
+fieldset {
+  display: block;
+  margin-bottom: 3em;
+  border-bottom: 1px solid $form-border;
+}
+
+legend {
+  @include font-size(18);
+  margin-bottom: 1.5em;
+  color: $headline-text;
+  font-family: $headline-font;
+}
+
+label {
+  @include font-size(14);
+  display: block;
+  margin-bottom: .5em;
+  &.radio {
+    @include inline-block;
+    margin-right: 1em;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  @include font-size(12);
+  outline: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: .625em .75em;
+  background-color: $input-field-bg;
+  border: 1px solid $form-border;
+  -webkit-appearance: none;
+  @include break-up($medium){
+    @include font-size(14);
+  }
+  &:focus {
+    background-color: $input-field-focus;
+    border-color: $input-border-focus;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 9em;
+}
+
+select {
+  @include font-size(16);
+  width: 100%;
+  margin-top: .375em;
+  margin-bottom: 1.5em;
+}
+
+input[type="submit"]{
+  @extend %transition;
+  @extend %lt-blue-button;
+  width: 100%;
+  margin-top: 1.5em;
+  -webkit-appearance: none;
+}
+
+.radio {
+  @include inline-block;
+  margin-right: 1.5em;
+  input[type="radio"]{
+    @include inline-block;
+    margin-top: -3px;
+    margin-right: .25em;
+  }
+  label {
+    @include inline-block;
+    margin-bottom: 0;
+  }
+  .generatedcontent & {
+    input[type="radio"]{
+      display: none;
+    }
+    label {
+      &:before {
+        @include inline-block;
+        @include border-radius(50%);
+        @include box-shadow(inset 0 0 0 3px $white);
+        content: '';
+        height: 1.5em;
+        width: 1.5em;
+        margin-right: .5em;
+        background-color: $white;
+        border: 1px solid $form-border;
+      }
+    }
+    input:checked + label:before {
+      background-color: $lt-blue;
+    }
+  }
+}
+
+.required {
+  color: $form-required;
+}

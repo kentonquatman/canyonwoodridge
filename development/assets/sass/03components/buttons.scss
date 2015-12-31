@@ -1,0 +1,91 @@
+/**************************************************
+ BUTTON STYLES
+**************************************************/
+
+%button {
+  @include font-size(24);
+  display: block;
+  padding: .5em;
+  border-width: 3px;
+  border-style: solid;
+  font-family: $button-font;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+%dk-transparent-button {
+  @extend %button;
+  border-color: $dk-blue;
+  color: $dk-blue;
+  &:hover, 
+  &:focus {
+    background-color: $dk-blue;
+    color: $white;
+  }
+}
+
+%lt-transparent-button {
+  @extend %button;
+  border-color: $white;
+  color: $white;
+  &:hover, 
+  &:focus {
+    background-color: $white;
+  }
+}
+
+%dk-blue-button {
+  @extend %button;
+  background-color: $dk-blue;
+  border-color: $dk-blue;
+  color: $white;
+  &:hover, 
+  &:focus {
+    background-color: lighten($dk-blue, 15%);
+    border-color: lighten($dk-blue, 15%);
+    color: $white;
+  }
+}
+
+%lt-blue-button {
+  @extend %button;
+  background-color: $lt-blue;
+  border-color: $lt-blue;
+  color: $white;
+  &:hover, 
+  &:focus {
+    background-color: darken($lt-blue, 10%);
+    border-color: darken($lt-blue, 10%);
+  }
+}
+
+%brown-button {
+  @extend %button;
+  background-color: $brown;
+  border-color: $brown;
+  color: $white;
+  &:hover, 
+  &:focus {
+    background-color: darken($brown, 10%);
+    border-color: darken($brown, 10%);
+  }
+}
+
+.small-button {
+  @extend %button;
+  @include font-size(16);
+  background-color: $brown;
+  border-color: $brown;
+  color: $white;
+  @include break-up($small){
+    width: 50%;
+  }
+  &:hover, 
+  &:focus {
+    background-color: $dk-blue;
+    border-color: $dk-blue;
+    color: $white;
+  }
+}

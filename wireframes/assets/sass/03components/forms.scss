@@ -1,0 +1,45 @@
+/**************************************************
+ DEFAULT FORM STYLES
+**************************************************/
+
+form {
+  @include border-radius(.3em);
+  padding: 1.8em;
+  border: 1px solid $border-color;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  @include border-radius(.3em);
+  @include font-size(16);
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: .5em 1em;
+  border: 1px solid $border-color;
+  -webkit-appearance: none;
+  @include break-up($medium){
+    @include font-size(14);
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 9em;
+}
+
+input {
+  &[type="submit"] {
+    @extend .button;
+    width: 100%;
+    -webkit-appearance: none;
+    @include break-up($small){
+      width: 50%;
+    }
+  }
+}

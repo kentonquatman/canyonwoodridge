@@ -1,0 +1,117 @@
+/**************************************************
+ CALENDAR STYLES
+**************************************************/
+
+.modal-overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparentize($black, .5);
+  .modal-box {
+    @include border-radius(.3em);
+    @include box-shadow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 210px;
+    width: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+    padding: 2.4em 1.8em;
+    background-color: $white;
+    p {
+      margin: 0;
+      color: $gray;
+      font-style: italic;
+    }
+    h4 {
+      @include font-size(16);
+      margin: 1em 0 0;
+      color: $gray;
+      font-weight: 400;
+    }
+    h2 {
+      margin: .25em 0 .75em;
+    }
+  }
+}
+
+.responsive-calendar {
+  overflow: hidden;
+  text-align: center;
+  .controls {
+    position: relative;
+    padding-bottom: 3em;
+    h4 {
+      margin: 0;
+    }
+  }
+  .prev, 
+  .next {
+    @include border-radius(.3em);
+    @include font-size(14);
+    position: absolute;
+    top: .25em;
+    display: block;
+    padding: .25em .5em;
+    background-color: $dk-gray;
+    color: $white;
+  }
+  .prev { left: 0; }
+  .next { right: 0; }
+  .day {
+    @include float;
+    @include font-size(14);
+    position: relative;
+    width: 14.285%;
+    margin-top: .25em;
+    a {
+      @include border-radius(.3em);
+      display: block;
+      padding: 1em 0;
+      color: $black;
+      &:hover {
+        background-color: $x-lt-gray;
+        text-decoration: none;
+      }
+    }
+    &.active {
+      a {
+        background-color: $black;
+        color: $white;
+        &:hover {
+          background-color: $dk-gray;
+        }
+      }
+      .not-current {
+        color: $x-lt-gray;
+        &:hover {
+          background-color: $lt-gray;
+        }
+      }
+    }
+    &.not-current {
+      a {
+        color: $x-lt-gray;
+        &:hover {
+          color: $lt-gray;
+        }
+      }
+    }
+    .badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      z-index: 1;
+    }
+  }
+  .day-headers {
+    @include border-radius(3px);
+    overflow: hidden;
+    padding: 1.2em 0;
+    border: 1px solid $border-color;
+  }
+}

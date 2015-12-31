@@ -1,0 +1,26 @@
+/**************************************************
+ SHAREABLE STYLES
+**************************************************/
+
+%site-column {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%site-padding {
+  padding: 3em $side-padding;
+}
+
+%clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display:table;
+    visibility:hidden;
+    content:"";
+  }
+  &:after {
+    clear:both;
+  }
+}

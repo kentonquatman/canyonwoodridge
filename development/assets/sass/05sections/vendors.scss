@@ -1,0 +1,120 @@
+/**************************************************
+ VENDORS SECTION STYLES
+**************************************************/
+
+#vendors {
+  .main {
+    header {
+      @extend %clearfix;
+      h1 {
+        margin-bottom: .5em;
+        @include break-up($small){
+          @include float;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.select-box {
+  position: relative;
+  margin: 1.25em 0 0;
+  @include break-up($small){
+    @include float(right);
+    width: 48.75%;
+    margin-top: .25em;
+  }
+  @include break-up($medium){
+    width: 49%;
+    margin-top: 1.25em;
+  }
+  label {
+    @extend %transition;
+    @include border-radius;
+    @include font-size(16);
+    display: block;
+    margin-bottom: 0;
+    padding: .625em 1em;
+    background-color: $select-box-bg;
+    border: 1px solid $select-box-border;
+    &:after {
+      @include float(right);
+      content: $triangle-down;
+      color: $select-box-arrow;
+    }
+  }
+  select {
+    @include opacity(0);
+    @include font-size(16);
+    @include border-radius(0);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    &:hover {
+      cursor: pointer;
+      & + label {
+        background-color: darken($select-box-bg, 10%);
+        border-color: darken($select-box-border, 10%);
+      }
+    }
+  }
+}
+
+.vendor-list {
+  @extend %clearfix;
+  list-style: none;
+  margin: 0;
+  li {
+    margin: 0 0 1em;
+    @include break-up($small){
+      @include float;
+      width: 48.75%;
+      margin: 0 0 2.5% 2.5%;
+      &:nth-child(odd){margin-left:0;clear:left}
+    }
+    @include break-up($medium){
+      width: 32%;
+      margin: 0 0 2% 2%;
+      &:nth-child(odd){margin-left:2%;clear:none}
+      &:nth-child(3n+1){margin-left:0;clear:left}
+    }
+    @include break-up($large){
+      width: 23.5%;
+      margin: 0 0 2% 2%;
+      &:nth-child(3n+1){margin-left:2%;clear:none}
+      &:nth-child(4n+1){margin-left:0;clear:left}
+    }
+  }
+  a {
+    @include border-radius;
+    display: block;
+    padding: 1em 1em .75em;
+    background-color: $vendor-card-bg;
+    border: 1px solid $vendor-card-border;
+    &:hover, 
+    &:focus {
+      background-color: $vendor-card-bg-hover;
+      border-color: $vendor-card-border-hover;
+      h4 {border-color:$vendor-card-border-hover}
+    }
+    h4, h5 {
+      margin: 0 0 .25em;
+      color: $headline-text;
+    }
+    h4 {
+      padding-bottom: .25em;
+      border-bottom: 1px solid $vendor-card-border;
+    }
+    p {
+      margin: 0 0 .25em;
+      color: $body-text;
+    }
+  }
+}

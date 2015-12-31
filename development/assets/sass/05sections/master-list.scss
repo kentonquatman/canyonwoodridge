@@ -1,0 +1,87 @@
+/**************************************************
+ MASTER LIST PAGE STYLES
+**************************************************/
+
+#master-list .main {background-image:none}
+
+.master-list {
+  ul {
+    margin: 0 0 3em;
+    li {
+      list-style: none;
+      margin: 1em 0 0;
+      padding-bottom: 1em;
+      border-bottom: 1px solid $border-color;
+      .modern.generatedcontent .main &:before{content:none}
+    }
+  }
+  h3 {
+    clear: left;
+    margin: 0;
+    @include break-up($small){clear:none;margin-left:2.75em}
+  }
+  .status {
+    @include border-radius;
+    @include font-size(11);
+    float: left;
+    width: 5em;
+    margin: 0 0 .5em;
+    padding: .25em;
+    background-color: $gray;
+    color: $white;
+    font-family: $sans-serif;
+    text-align: center;
+    @include break-up($small){margin-top:.75em}
+    &.booked {background-color: #5C995C;}
+  }
+  .pagination {
+    a {
+      @include font-size(18);
+      display: block;
+      &.prev {float:left}
+      &.next {float:right}
+    }
+  }
+}
+
+.reservation-details {
+  .status-form {
+    max-width: 30em;
+    margin: 3em 0 0;
+    padding: 1.5em;
+    h4 {margin: .25em 0 1em}
+    select {margin: 0 0 1em}
+    input[type="submit"]{
+      @include font-size(16);
+      margin: 0;
+      font-family: $body-font;
+      text-transform: none;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  }
+  footer {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid $border-color;
+  }
+}
+
+
+.login-screen {
+  .main & {
+    float: none;
+    width: auto;
+    max-width: 36em;
+    margin: 0 auto;
+  }
+  header {
+    padding-bottom: 0;
+    border-bottom: none;
+    text-align: center;
+  }
+}
+
+.login-form {
+  max-width: 42em;
+  margin: 4.5em auto 0;
+}

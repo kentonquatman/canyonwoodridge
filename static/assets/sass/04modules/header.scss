@@ -1,0 +1,80 @@
+/**************************************************
+ HEADER STYLES
+**************************************************/
+
+header {
+  .wrapper > & {
+    @extend %clearfix;
+    @include box-shadow(0 0 20px transparentize($black, .75));
+    position: relative;
+    z-index: 10;
+    background-color: $header-bg;
+    @include break-up($medium){
+      border-top: 6px solid $header-border;
+    }
+    @include break-up($large){
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-right: 4%;
+      padding-left: 4%;
+      background-position: 3% 0;
+    }
+    .ltie9 & {
+      border-bottom: 1px solid $header-border;
+    }
+    h1 {
+      @include font-size(10);
+      margin: 0;
+      padding: 3em 0;
+      background: url('../img/logo/initials-01.svg') center center no-repeat;
+      background-size: 80px 100px;
+      .ltie9 & {
+        background-image: url('../img/logo/initials-01.png');
+      }
+      @include break-up($medium){
+        padding: 1.8em 0;
+      }
+      @include break-up($large){
+        @include float;
+        margin-left: -3em;
+        padding-left: 3em;
+        background-position: left center;
+      }
+      a {
+        display: block;
+        overflow: hidden;
+        height: 0;
+        width: 270px;
+        padding-top: 54px;
+        margin: 0 auto;
+        background: url('../img/logo/canyonwood-ridge-logo-01.svg') 0 0 no-repeat;
+        .ltie9 & {
+          background-image: url('../img/logo/canyonwood-ridge-logo-01.png');
+        }
+      }
+    }
+  }
+  .nav-toggle {
+    @include font-size(18);
+    @include background-image(linear-gradient($nav-toggle-bg-one, $nav-toggle-bg-two));
+    display: block;
+    padding: .75em $side-padding;
+    background-color: $nav-toggle-bg-two;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid $nav-toggle-border;
+    color: $nav-toggle-text;
+    font-family: $button-font;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:hover {
+      background-position: 0 -1em;
+      color: $nav-toggle-text;
+    }
+    @include break-up($medium){
+      display: none;
+    }
+  }
+}

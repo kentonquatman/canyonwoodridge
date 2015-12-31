@@ -1,0 +1,161 @@
+/**************************************************
+ NAVIGATION STYLES
+**************************************************/
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    margin: 0;
+  }
+}
+
+/**************************************************
+ HEADER NAVIGATION STYLES
+**************************************************/
+
+header {
+  nav {
+    display: none;
+    text-align: center;
+    @include break-up($medium){
+      display: block;
+      padding: 1.5em $side-padding .15em;
+      border-top: 1px solid darken($header-bg, 10%);
+    }
+    @include break-up($large){
+      @include float(right);
+      text-align: right;
+      margin-top: 3.3em;
+      padding: 0;
+      border-top: none;
+    }
+    li {
+      @include inline-block(baseline);
+      @include font-size(16);
+      position: relative;
+      margin-left: .25em;
+      padding-bottom: .75em;
+      text-transform: uppercase;
+      @include break-up($x-large){
+        @include font-size(18);
+        margin-left: .5em;
+        -webkit-font-smoothing: antialiased;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:before {
+        content: $vertical-bar;
+        margin-right: .25em;
+        color: $nav-divider;
+        @include break-up($x-large){
+          margin-right: .375em;
+        }
+      }
+      &:first-child:before {
+        content: none;
+      }
+      ul {
+        @include transition(.2s);
+        @include opacity(0);
+        @include border-radius;
+        @include box-shadow(0 0 10px transparentize($black, .9));
+        position: absolute;
+        z-index: 10;
+        top: .9em;
+        left: 50%;
+        margin-left: -90px;
+        overflow: hidden;
+        max-height: 0;
+        width: 180px;
+        padding: .5em 0;
+        background-color: $sub-nav-bg;
+        border: 1px solid $sub-nav-border;
+        text-align: center;
+      }
+      &:hover ul {
+        @include opacity(1);
+        top: 2em;
+        max-height: 1000px;
+      }
+      li {
+        @include font-size(16);
+        display: block;
+        margin-left: 0;
+        padding-bottom: 0;
+        text-transform: none;
+        &:before {
+          display: none;
+        }
+        a {
+          display: block;
+          padding: .25em .75em;
+        }
+      }
+    }
+  }
+  a {
+    color: $nav-link-color;
+    &:hover, 
+    &:focus {
+      color: $nav-link-hover;
+    }
+  }
+}
+
+/**************************************************
+ PANEL NAVIGATION STYLES
+**************************************************/
+
+nav.panel {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: $narrow-nav-bg;
+  -webkit-overflow-scrolling: touch;
+  @include break-up($medium){
+    display: none !important;
+  }
+  .open-nav & {
+    display: block;
+    z-index: 1;
+  }
+  ul {
+    border-bottom: $narrow-nav-border;
+  }
+  li {
+    @include font-size(16);
+    margin: 0;
+    border-top: $narrow-nav-border;
+    a {
+      display: block;
+      padding: 1em $side-padding;
+      background-color: $narrow-nav-bg;
+      color: $narrow-nav-color;
+    }
+    ul {
+      border-top: $narrow-nav-border;
+      border-bottom: none;
+    }
+    li {
+      @include font-size(14);
+      border-top: $narrow-subnav-border;
+      &:first-child {
+        border-top: none;
+      }
+      a {
+        background-color: $narrow-subnav-bg;
+        color: $narrow-subnav-color;
+      }
+    }
+  }
+}

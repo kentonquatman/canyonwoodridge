@@ -1,0 +1,70 @@
+/**************************************************
+ FOOTER STYLES
+**************************************************/
+
+footer {
+  @extend %site-padding;
+  border-top: 1px solid $border-color;
+  text-align: center;
+  @include break-up($small){
+    text-align: left;
+  }
+  h2 {
+    @include font-size(24);
+    margin: 0 0 1em;
+    @include break-up($small){
+      @include float;
+    }
+  }
+  .contact, 
+  .legal-links, 
+  .external-links {
+    margin-bottom: 1.8em;
+    @include break-up($medium){
+      margin-bottom: 1.2em;
+    }
+  }
+  .contact {
+    @include border-radius(.3em);
+    max-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.8em;
+    background-color: $footer-address;
+    @include break-up($small){
+      @include float(right);
+      width: 210px;
+      max-width: none;
+      margin: 0 0 3em;
+      text-align: center;
+    }
+    h4 {
+      margin: 0 0 .5em;
+    }
+    p {
+      margin: .25em 0;
+    }
+  }
+  nav {
+    clear: left;
+    @include break-up($small){
+      margin-right: 240px;
+      padding-left: .3em;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        margin: 0;
+        @include break-up($medium){
+          display: inline;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+  small {
+    display: block;
+    padding: 0 .125em;
+  }
+}

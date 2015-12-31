@@ -1,0 +1,57 @@
+/**************************************************
+ FACILITY PAGE STYLES
+**************************************************/
+
+.sm-gallery {
+  margin-top: 4.5em;
+  padding: 0;
+  @include break-up($small){
+    margin-top: 3em;
+  }
+  ul {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 1.5em;
+    background-color: $lt-cream;
+    border: 1px solid $border-color;    
+    li {
+      @include float;
+      width: 48.75%;
+      margin: 0 0 2.5% 2.5%;
+      padding: .5em;
+      background-color: $white;
+      border: 1px solid $border-color;
+      &:nth-child(odd){margin-left:0}
+      @include break-up($small){
+        width: 23.125%;
+        margin-bottom: 0;
+        &:nth-child(odd){margin-left:2.5%}
+        &:first-child{margin-left:0}
+      }
+      @include break-up($medium){ padding: .25em; }
+      @include break-up($large){ padding: .5em; }
+      .modern.generatedcontent & {&:before{content:none!important}}
+    }
+    a {
+      display: block;
+      background-color: $lt-blue;
+      &:hover, 
+      &:focus {
+        img {
+          @include opacity(.5);
+        }
+      }
+    }
+    img {
+      @extend %transition;
+      display: block;
+    }
+  }
+  a.more {
+    @include inline-block;
+    @include font-size(18);
+    margin-top: 1.5em;
+    -webkit-font-smoothing: antialiased;
+  }
+}

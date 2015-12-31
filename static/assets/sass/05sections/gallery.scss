@@ -1,0 +1,80 @@
+/**************************************************
+ GALLERY SECTION STYLES
+**************************************************/
+
+#gallery {
+  .main {
+    padding-bottom: 3em;
+    @include break-up($large){
+      padding-top: $fixed-top-padding;
+    }
+    article {
+      @include reset-float;
+      width: auto;
+      margin: 0;
+    }
+    .video {
+      margin-bottom: 3em;
+      @include break-up($medium){
+        @include float(right);
+        width: 70%;
+        margin: -10em 0 0;
+        padding: 0 0 1em 4%;
+        background-color: $main-bg;
+      }
+      @include break-up($large){
+        width: 52%;
+        margin-left: 3%;
+      }
+    }
+    .text {
+      @include break-up($medium){width:66%}
+      @include break-up($large){width:74.5%}
+    }
+  }
+}
+
+section.gallery {
+  background-color: $gallery-bg;
+  border-top: 6px solid $cream;
+}
+
+.thumb-gallery {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  li {
+    @include float;
+    width: 48.75%;
+    margin: 0 0 2.5% 2.5%;
+    padding: .5em;
+    background-color: $white;
+    border: 1px solid darken($cream, 5%);
+    &:nth-child(odd){margin-left:0}
+    @include break-up($medium){
+      width: 32%;
+      margin: 0 0 2% 2%;
+      &:nth-child(odd){margin-left:2%}
+      &:nth-child(3n+1){margin-left:0}
+    }
+    @include break-up($large){
+      width: 23.5%;
+      margin: 0 0 2% 2%;
+      &:nth-child(3n+1){margin-left:2%}
+      &:nth-child(4n+1){margin-left:0}
+    }
+    a {
+      display: block;
+      background-color: $lt-blue;
+      &:hover {
+        img {
+          @include opacity(.5);
+        }
+      }
+    }
+    img {
+      @extend %transition;
+      display: block;
+    }
+  }
+}

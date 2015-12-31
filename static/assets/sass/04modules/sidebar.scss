@@ -1,0 +1,51 @@
+/**************************************************
+ SIDEBAR STYLES
+**************************************************/
+
+.side-bar {
+  @include break-up($medium){
+    @include float(right);
+    width: 30%;
+  }
+  @include break-up($large){
+    width: 25%;
+  }
+  h3 {
+    @include font-size(18);
+    margin: .5em 0 1em;
+    text-align: center;
+  }
+  aside {
+    margin-bottom: 3em;
+    padding: .9em .9em;
+    background-color: $lt-cream;
+    border: 1px solid $border-color;
+    p {
+      margin: .5em 0;
+    }
+  }
+}
+
+.sub-nav {
+  list-style: none;
+  max-width: 360px;
+  margin: 0 auto;
+  li {
+    @include font-size(18);
+    @include break-up($medium){
+      @include font-size(14);
+    }
+    margin: 0 0 .25em;
+    a {
+      display: block;
+      padding: .5em 1em;
+      background-color: $button-bg;
+      color: $button-text;
+      text-align: center;
+      &:hover, 
+      &:focus {
+        background-color: lighten($button-bg, 10%);
+      }
+    }
+  }
+}

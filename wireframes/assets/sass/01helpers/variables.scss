@@ -1,0 +1,100 @@
+/**************************************************
+ FONT STACKS
+**************************************************/
+
+$sans-serif: "Helvetica Neue", Helmet, Freesans, sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: "courier new", monospace, serif;
+
+/**************************************************
+ FONT USAGE
+**************************************************/
+
+$body-font: $sans-serif;
+$code-font: $monospace;
+$headline-font: $sans-serif;
+$button-font: $sans-serif;
+$nav-font: $sans-serif;
+
+/**************************************************
+ COLOR PALETTE
+**************************************************/
+
+$black: #000;
+$dk-gray: #404040;
+$gray: #808080;
+$lt-gray: #bfbfbf;
+$x-lt-gray: #e6e6e6;
+$white: #fff;
+
+/**************************************************
+ COLOR USAGE
+**************************************************/
+
+$selection-bg: transparentize($lt-gray, 0.5);
+$selection-text: $black;
+
+/* Base Colors */
+
+$body-bg: $white;
+$body-text: $black;
+$border-color: $lt-gray;
+
+/* Link Colors */
+
+$link-color: $gray;
+$link-hover: $dk-gray;
+
+/* Button Colors */
+
+$button-bg: $dk-gray;
+$button-text: $white;
+
+/* Header Colors */
+
+$header-bg: $white;
+
+/* Navigation Colors */
+
+$nav-toggle-bg: $lt-gray;
+$nav-toggle-hover: $gray;
+
+$narrow-nav-color: $white;
+$narrow-nav-bg: $dk-gray;
+$narrow-nav-border: 1px solid darken($narrow-nav-bg, 10%);
+
+$narrow-subnav-color: $white;
+$narrow-subnav-bg: lighten($narrow-nav-bg, 10%);
+$narrow-subnav-border: 1px solid darken($narrow-subnav-bg, 10%);
+
+$nav-link-color: $dk-gray;
+$nav-link-hover: $gray;
+
+/* Slider Colors */
+
+$slider-bg: $gray;
+$slide-pager-bg: $dk-gray;
+$slide-marker: $white;
+$slide-marker-hover: $lt-gray;
+$slide-marker-active: $gray;
+
+/* Footer Colors */
+
+$footer-address: lighten($lt-gray, 15%);
+
+/**************************************************
+ UNICODE CHARACTERS
+**************************************************/
+
+$vertical-bar: "\007C";
+$bullet: "\U2022";
+$triangle-down: "\U25BC";
+$triangle-up: "\U25B2";
+
+/**************************************************
+ SITE SPECIFIC
+**************************************************/
+
+$base-size: 10;
+$side-padding: 8%;
+$fixed-top-padding: 11.6em;

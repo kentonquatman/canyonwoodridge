@@ -1,0 +1,132 @@
+/**************************************************
+ MAIN SECTION STYLES
+**************************************************/
+
+.main {
+  padding-bottom: 6em;
+  @include break-up($large){
+    padding-top: $fixed-top-padding;
+    padding-bottom: 9em;
+  }
+  article, 
+  #contact & form {
+    margin-bottom: 6em;
+    @include break-up($medium){
+      @include float;
+      width: 65%;
+      margin-bottom: 0;
+    }
+    #contact & {
+      @include reset-float;
+      margin-bottom: 3em;
+    }
+  }
+  .side-bar, 
+  aside {
+    @include break-up($medium){
+      @include float(right);
+      width: 30%;
+    }
+    h3 {
+      @include font-size(18);
+      margin: .5em 0 1.25em;
+      text-align: center;
+    }
+  }
+  aside {
+    @include border-radius(.3em);
+    padding: 1.8em 1.8em;
+    border: 1px solid $border-color;    
+  }
+  .side-bar {
+    aside {
+      @include reset-float;
+      width: auto;
+      margin-bottom: 3em;
+      p {
+        margin: .5em 0;
+      }
+    }
+  }
+}
+
+.sub-nav {
+  list-style: none;
+  max-width: 360px;
+  margin: 0 auto;
+  li {
+    @include font-size(18);
+    @include break-up($medium){
+      @include font-size(14);
+    }
+    margin: 0 0 .5em;
+    a {
+      @include border-radius(.3em);
+      display: block;
+      padding: .5em 1em;
+      background-color: $button-bg;
+      color: $button-text;
+      &:hover, 
+      &:focus {
+        background-color: lighten($button-bg, 10%);
+      }
+    }
+  }
+}
+
+.small-gallery {
+  overflow: hidden;
+  list-style: none;
+  width: 103.33%;
+  margin: 3em 0 0 -3.33%;
+  li {
+    @include float;
+    margin: 0 0 3.33% 3.33%;
+    width: 30%;
+  }
+  img {
+    display: block;
+  }
+}
+
+/**************************************************
+ HOMEPAGE SPECIFIC STYLES
+**************************************************/
+
+#home {
+  .about {
+    padding-bottom: 6em;
+    @include break-up($large){
+      padding-top: 6em;
+    }
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/**************************************************
+ PAYMENTS PAGE STYLES
+**************************************************/
+
+.payments-list {
+  list-style: none;
+  margin: 0;
+  li {
+    @include font-size(10);
+    margin-bottom: 4.5em;
+    padding-top: 3em;
+    border-top: 1px solid $border-color;
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    p {
+      margin: 0 0 1.5em;
+    }
+  }
+}

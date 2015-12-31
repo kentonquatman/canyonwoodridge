@@ -1,0 +1,57 @@
+/**************************************************
+ HOMEPAGE SPECIFIC STYLES
+**************************************************/
+
+#home {
+  .main {
+    padding-top: 6em;
+    padding-bottom: 7.5em;
+    @include break-up($medium){padding-bottom:9em}
+    article {
+      @include reset-float;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 .75em;
+      padding-bottom: .625em;
+      border-bottom: 1px solid $border-color;
+      text-align: center;
+    }
+    p {
+      &:first-of-type {
+        @include font-size(16);
+        line-height: 1.8;
+        @include break-up($small){
+          @include font-size(18);
+        }
+      }
+    }
+    .button {
+      @extend %lt-blue-button;
+      max-width: 20em;
+      margin: 3em auto 0;
+    }
+  }
+  .more-info {
+    background-color: $cream;
+    .button {
+      @extend %dk-transparent-button;
+      margin-top: 1em;
+      &:hover,&:focus{color:$cream}
+      @include break-up($medium){
+        @include float;
+        width: 48.75%;
+        margin-left: 2.5%;
+        margin-top: 0;
+      }
+      &:first-child {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+  }
+  footer {
+    border-top: none;
+  }
+}

@@ -1,0 +1,18 @@
+/**************************************************
+ BUTTON STYLES
+**************************************************/
+
+.button {
+  @include button;
+}
+
+.small-button {
+  @extend .button;
+  @include font-size(16);
+  @include break-up($small){
+    width: 75%;
+  }
+  @include break-up($medium){
+    width: 50%;
+  }
+}

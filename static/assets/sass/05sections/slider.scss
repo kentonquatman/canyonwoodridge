@@ -1,0 +1,72 @@
+/**************************************************
+ SLIDE SHOW STYLES
+**************************************************/
+
+.slider {
+  padding: 0;
+  background-color: $slider-bg;
+  @include break-up($large){
+    padding-top: 9em;
+  }
+}
+
+.slides {
+  margin: 0;
+  li {
+    margin: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.flex-control-nav {
+  margin: 0;
+  padding: .9em $side-padding;
+  background-color: $slide-pager-bg;
+  text-align: center;
+  list-style: none;
+  @include break-up($medium){
+    text-align: right;
+  }
+  li {
+    @include inline-block;
+    @include font-size(10);
+    margin: 0 1.5em;
+    @include break-up($medium){
+      margin-right: 0;
+      margin-left: 1em;
+    }
+    a {
+      @include border-radius(50%);
+      display: block;
+      overflow: hidden;
+      height: 0;
+      width: 15px;
+      padding-top: 13px;
+      border: 1px solid $slide-marker;
+      @include break-up($medium){
+        width: 12px;
+        padding-top: 10px;
+      }
+      &:hover {
+        background-color: $slide-marker-hover;
+      }
+      &.flex-active {
+        background-color: $slide-marker-active;
+        border-color: $slide-marker-active;
+      }
+    }
+  }
+  @include break-up($medium){
+    li {
+      margin: 0 .75em;
+    }
+  }
+}
+
+.flex-direction-nav {
+  display: none;
+}

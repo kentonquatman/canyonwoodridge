@@ -1,0 +1,20 @@
+/**************************************************
+ SHAREABLE STYLES
+**************************************************/
+
+%clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display:table;
+    visibility:hidden;
+    content:"";
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+%transition {
+  @include transition;
+}

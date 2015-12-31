@@ -1,0 +1,67 @@
+/**************************************************
+ MAIN SECTION STYLES
+**************************************************/
+
+.main {
+  padding-bottom: 6em;
+  @include break-up($large){
+    padding-top: $fixed-top-padding;
+    padding-bottom: 9em;
+  }
+  header {
+    margin-bottom: 2.4em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $border-color;
+    h1 {
+      margin: 0;
+    }
+  }
+  article {
+    .modern.generatedcontent & {
+      ul {
+        list-style: none;
+        li {
+          &:before {
+            @include float;
+            content: $bullet;
+            display: block;
+            margin-left: -1.25em;
+            color: $lt-brown;
+          }
+        }
+      }
+      ol {
+        list-style: none;
+        counter-reset: section;
+        li {
+          &:before {
+            @include float;
+            counter-increment: section;
+            content: counter(section)".";
+            display: block;
+            width: 2.4em;
+            margin-left: -3em;
+            color: $lt-brown;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  article, 
+  #contact & form {
+    margin-bottom: 6em;
+    @include break-up($medium){
+      @include float;
+      width: 65%;
+      margin-bottom: 0;
+    }
+    @include break-up($large){
+      width: 70%;
+    }
+    #contact & {
+      @include reset-float;
+      margin-bottom: 3em;
+    }
+  }
+}

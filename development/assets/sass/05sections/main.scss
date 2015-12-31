@@ -1,0 +1,119 @@
+/**************************************************
+ MAIN SECTION STYLES
+**************************************************/
+
+.main {
+  padding-bottom: 6em;
+  @include break-up($medium){
+    background-image: url("../img/backgrounds/tree-bg-01.jpg");
+    background-position: 90% 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 12em;
+  }
+  @include break-up($large){
+    padding-top: $fixed-top-padding;
+  }
+  header {
+    margin-bottom: 2.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $border-color;
+    h1 {
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+  article {
+    @extend %major-column;
+    margin-bottom: 6em;
+    @include break-up($medium){
+      margin-bottom: 0;
+    }
+    .modern.generatedcontent & {
+      ul {
+        list-style: none;
+        li {
+          &:before {
+            @include float;
+            content: "\25CF";
+            display: block;
+            margin-left: -1.5em;
+            color: $lt-brown;
+          }
+          li:before {
+            content: "\25C6";
+          }
+        }
+      }
+      ol {
+        list-style: none;
+        counter-reset: section;
+        li {
+          &:before {
+            @include float;
+            counter-increment: section;
+            content: counter(section)".";
+            display: block;
+            width: 2.4em;
+            margin-left: -3em;
+            color: $lt-brown;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sm-gallery {
+  margin-top: 4.5em;
+  padding: 0;
+  @include break-up($small){
+    margin-top: 3em;
+  }
+  ul {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 1.5em;
+    background-color: $module-bg;
+    border: 1px solid $module-border;    
+    li {
+      @include float;
+      width: 48.75%;
+      margin: 0 0 2.5% 2.5%;
+      padding: .5em;
+      background-color: $thumb-gallery-image-bg;
+      border: 1px solid $thumb-gallery-border;
+      &:nth-child(odd){margin-left:0}
+      @include break-up($small){
+        width: 23.125%;
+        margin-bottom: 0;
+        &:nth-child(odd){margin-left:2.5%}
+        &:first-child{margin-left:0}
+      }
+      @include break-up($medium){ padding: .25em; }
+      @include break-up($large){ padding: .5em; }
+      .modern.generatedcontent & {&:before{content:none!important}}
+    }
+    a {
+      display: block;
+      background-color: $thumb-gallery-image-hover;
+      &:hover, 
+      &:focus {
+        img {
+          @include opacity(.5);
+        }
+      }
+    }
+    img {
+      @extend %transition;
+      display: block;
+    }
+  }
+  a.more {
+    @include inline-block;
+    @include font-size(18);
+    margin-top: 1.5em;
+    -webkit-font-smoothing: antialiased;
+  }
+}

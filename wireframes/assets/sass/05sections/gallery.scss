@@ -1,0 +1,54 @@
+/**************************************************
+ GALLERY SECTION STYLES
+**************************************************/
+
+.video {
+  border-bottom: 1px solid $border-color;
+  @include break-up($large){
+    padding-top: $fixed-top-padding;
+  }
+  aside {
+    margin-bottom: 3em;
+    @include break-up($medium){
+      @include float(right);
+      width: 50%;
+      margin-left: 3em;
+    }
+  }
+  .text {
+    @include break-up($medium){
+      margin-right: 20%;
+    }
+  }
+}
+
+.thumb-gallery {
+  overflow: hidden;
+  list-style: none;
+  width: 105%;
+  margin: 0 0 0 -5%;
+  @include break-up($small){
+    width: 103.33%;
+    margin-left: -3.33%;
+  }
+  @include break-up($medium){
+    width: 102.5%;
+    margin-left: -2.5%;
+  }
+  li {
+    @include float;
+    margin: 2.5% 0 2.5% 5%;
+    width: 45%;
+    @include break-up($small){
+      width: 30%;
+      margin: 1.66% 0 1.66% 3.33%;
+    }
+    @include break-up($medium){
+      width: 22.5%;
+      margin: 1.25% 0 1.25% 2.5%;
+    }
+  }
+  img {
+    display: block;
+  }
+}

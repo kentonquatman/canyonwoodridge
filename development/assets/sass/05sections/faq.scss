@@ -1,0 +1,57 @@
+/**************************************************
+ FAQ STYLES
+**************************************************/
+
+#faq {
+  .main {
+    header {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.faq-list {
+  .question {
+    margin-bottom: 1em;
+    h4 {
+      @include font-size(18);
+      margin: 0;
+      a {
+        position: relative;
+        display: block;
+        padding: .75em 3em .75em 3em;
+        background-color: $x-lt-blue;
+        color: $dk-blue;
+        &:hover {
+          background-color: $lt-blue;
+          color: $white;
+          span, &:after {color: darken($lt-blue, 20%)}
+        }
+        &:after {
+          content: $triangle-down;
+          display: block;
+          position: absolute;
+          right: .75em;
+          top: 50%;
+          margin-top: -.5em;
+          color: $lt-blue;
+        }
+        span {
+          margin-left: -1.75em;
+          margin-right: .5em;
+          color: $lt-blue;
+        }
+      }
+    }
+  }
+  .answer {
+    display: none;
+    overflow: hidden;
+    padding: .5em 5.5em 1.5em;
+    border: 1px solid $border-color;
+    border-top: none;
+    .no-js & {
+      display: block;
+    }
+  }
+}

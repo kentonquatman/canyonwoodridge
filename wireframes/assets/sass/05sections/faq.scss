@@ -1,0 +1,25 @@
+/**************************************************
+ FAQ STYLES
+**************************************************/
+
+.faq-list {
+  list-style: none;
+  margin: 0 0 3em;
+  border-top: 2px solid $border-color;
+  border-bottom: 3px solid $border-color;
+  li {
+    margin: 0;
+    padding: .75em .25em;
+    border-top: 1px solid $border-color;
+  }
+}
+
+.answers {
+  div {
+    padding: 3em 0;
+    border-top: 1px solid $border-color;
+    &:first-child {
+      border-top: none;
+    }
+  }
+}

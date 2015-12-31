@@ -1,0 +1,100 @@
+/**************************************************
+ VENDORS SECTION STYLES
+**************************************************/
+
+#vendors {
+  .main {
+    header {
+      @extend %clearfix;
+      h1 {
+        margin-bottom: .5em;
+        @include break-up($small){
+          @include float;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.select-box {
+  position: relative;
+  margin: 1.25em 0 0;
+  @include break-up($small){
+    @include float(right);
+    width: 48.75%;
+  }
+  @include break-up($medium){
+    width: 49%;
+  }
+  label {
+    @include box-shadow(transparentize($black, .85) 0 0 .5em);
+    @include font-size(14);
+    display: block;
+    padding: .75em 1em;
+    border: 1px solid $lt-gray;
+    &:after {
+      @include float(right);
+      content: $triangle-down;
+      color: $lt-brown;
+    }
+  }
+  select {
+    @include opacity(0);
+    @include font-size(16);
+    @include border-radius(0);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $lt-brown;
+    -webkit-appearance: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.vendor-list {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  li {
+    margin: 0 0 1em;
+    @include break-up($small){
+      @include float;
+      width: 48.75%;
+      margin: 0 0 2.5% 2.5%;
+      &:nth-child(odd){margin-left:0}
+    }
+    @include break-up($medium){
+      width: 32%;
+      margin: 0 0 2% 2%;
+      &:nth-child(odd){margin-left:2%}
+      &:nth-child(3n+1){margin-left:0}
+    }
+    @include break-up($large){
+      width: 23.5%;
+      margin: 0 0 2% 2%;
+      &:nth-child(3n+1){margin-left:2%}
+      &:nth-child(4n+1){margin-left:0}
+    }
+  }
+  a {
+    display: block;
+    padding: .75em 1em;
+    background-color: $lt-brown;
+    &:hover, 
+    &:focus {
+      background-color: $dk-gray;
+    }
+  }
+  h4, p {
+    color:  $white;
+    margin: 0 0 .25em;
+  }
+}
