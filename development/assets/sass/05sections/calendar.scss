@@ -115,7 +115,7 @@ table.calendar {
 }
 
 .calendar-key {
-  margin: 0 0 6em;
+  margin: 3em 0 6em;
   text-align: center;
   li {
     @include inline-block;
@@ -138,16 +138,8 @@ table.calendar {
     }
   }
   @include break-up($medium){
-    margin: .75em 0 2.875em;
-    li {
-      @include font-size(12)
-    }
-  }
-  @include break-up($x-large){
-    margin: .625em 0 2.625em;
-    li {
-      @include font-size(14)
-    }
+    margin: 3em 0 0;
+    text-align: left;
   }
 }
 
@@ -182,5 +174,76 @@ table.calendar {
     @extend %brown-button;
     @include font-size(18);
     margin-top: .5em;
+  }
+}
+
+.select-date {
+  @extend %sidebar-module;
+  form {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+  input[type="submit"]{
+    @include font-size(18);
+    margin-top: .5em;
+  }
+}
+
+.date-select-box {
+  position: relative;
+  width: 49%;
+  margin-bottom: 1em;
+  &.month-select { float: left }
+  &.year-select { float: right }
+  @include break-up($medium){
+    width: auto;
+    &.month-select,
+    &.year-select {
+      float: none;
+    }
+  }
+  @include break-up($x-large){
+    width: 49%;
+    &.month-select { float: left }
+    &.year-select { float: right }
+  }
+  label {
+    @extend %transition;
+    @include border-radius;
+    @include font-size(16);
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    padding: .625em 1em;
+    background-color: $select-box-bg;
+    border: 1px solid $select-box-border;
+    &:after {
+      position: absolute;
+      right: .5em;
+      content: $triangle-down;
+      color: $select-box-arrow;
+    }
+  }
+  select {
+    @include opacity(0);
+    @include font-size(16);
+    @include border-radius(0);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    &:hover {
+      cursor: pointer;
+      & + label {
+        background-color: darken($select-box-bg, 10%);
+        border-color: darken($select-box-border, 10%);
+      }
+    }
   }
 }

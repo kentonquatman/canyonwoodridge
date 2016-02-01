@@ -33,13 +33,15 @@
     @extend %transition;
     @include border-radius;
     @include font-size(16);
+    position: relative;
     display: block;
     margin-bottom: 0;
     padding: .625em 1em;
     background-color: $select-box-bg;
     border: 1px solid $select-box-border;
     &:after {
-      @include float(right);
+      position: absolute;
+      right: .5em;
       content: $triangle-down;
       color: $select-box-arrow;
     }

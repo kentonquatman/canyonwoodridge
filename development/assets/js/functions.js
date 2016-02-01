@@ -54,6 +54,23 @@ var Site = window.Site || {};
 			window.location.assign(changeCatLink);
 			return false;
 		})
+		
+    // DATE SELECTOR
+    
+    var loadActionValue = $("#date-selection-form").attr('action');
+    var loadMonthValue = $("#month-select").find(":selected").text();
+    var loadYearValue = $("#year-select").find(":selected").text();
+    $("#month-select").siblings("label").text(loadMonthValue);
+    $("#year-select").siblings("label").text(loadYearValue);
+    
+		$("#date-selection-form select").change(function(){
+			var newLabelValue = $(this).find(":selected").text();
+			var newMonthValue = $('#month-select').find(":selected").attr('value');
+			var newYearValue = $('#year-select').find(":selected").attr('value');
+			$("#date-selection-form").attr("action", loadActionValue + newYearValue + "/" + newMonthValue);
+			$(this).siblings("label").text(newLabelValue);
+		})
+
 
   });
 })(jQuery);
