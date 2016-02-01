@@ -220,6 +220,7 @@ table.calendar {
     border: 1px solid $select-box-border;
     &:after {
       position: absolute;
+      top: .75em;
       right: .5em;
       content: $triangle-down;
       color: $select-box-arrow;

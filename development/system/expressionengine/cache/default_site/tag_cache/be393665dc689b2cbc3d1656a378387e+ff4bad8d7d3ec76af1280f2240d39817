@@ -1,0 +1,71 @@
+a:3:{s:4:"time";i:1454312910;s:3:"ttl";i:0;s:4:"data";s:2551:"<aside class="select-date">
+        <h3>Select Date</h3>
+        <form action="{site_url}pricing-and-availability/calendar/" id="date-selection-form">
+          <div class="date-select-box month-select">
+            <select id="month-select">
+              <option value="04">Month</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <label for="month-select">Month</label>
+          </div>
+          <div class="date-select-box year-select">
+            <select id="year-select">
+              <option value="2016">Year</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
+            <label for="year-select">Year</label>
+          </div>
+          <input type="submit" value="View Date">
+        </form>
+      </aside>
+      <aside class="price-table">
+        <h3>Base Rental Rates</h3>
+        <table>
+          
+          <tr>
+            <td class="day">Monday - Thursday</td>
+            <td class="price">$3,000</td>
+          </tr>
+          
+          <tr>
+            <td class="day">Friday</td>
+            <td class="price">$5,500</td>
+          </tr>
+          
+          <tr>
+            <td class="day">Saturday</td>
+            <td class="price">$7,000</td>
+          </tr>
+          
+          <tr>
+            <td class="day">Sunday</td>
+            <td class="price">$4,500</td>
+          </tr>
+          
+        </table>
+        
+        
+        <a class="button" href="http://canyonwoodridge.dev/pricing-and-availability/pricing/">More Info</a>
+        
+        
+      </aside>";}

@@ -1,0 +1,14 @@
+a:3:{s:4:"time";i:1454312823;s:3:"ttl";i:0;s:4:"data";s:734:"
+    <article>
+      <header>
+        <h1>Make a Payment</h1>
+      </header>
+      <p>All payments to Canyonwood Ridge must be processed by either personal check or on our website through the Payment Form below, which is then processed through&nbsp;PayPal.</p>
+
+<p>Once you complete the payment information form below you will&nbsp;be directed to PayPal to enter your credit card information and complete the transaction.</p>
+      <form class="payment-form" name="PrePage" method="post" action="https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx">
+        <input type="hidden" name="LinkId" value="a73aa8c0-a205-4835-8eaf-8435ff6ff45e" />
+        <input type="submit" value="Pay Now" />
+      </form>
+    </article>
+  ";}

@@ -1,9 +1,9 @@
-a:3:{s:4:"time";i:1454312308;s:3:"ttl";i:0;s:4:"data";s:2551:"<aside class="select-date">
+a:3:{s:4:"time";i:1454312910;s:3:"ttl";i:0;s:4:"data";s:2545:"<aside class="select-date">
         <h3>Select Date</h3>
         <form action="{site_url}pricing-and-availability/calendar/" id="date-selection-form">
           <div class="date-select-box month-select">
             <select id="month-select">
-              <option value="09">Month</option>
+              <option value="">Month</option>
               <option value="01">January</option>
               <option value="02">February</option>
               <option value="03">March</option>
@@ -21,7 +21,7 @@ a:3:{s:4:"time";i:1454312308;s:3:"ttl";i:0;s:4:"data";s:2551:"<aside class="sele
           </div>
           <div class="date-select-box year-select">
             <select id="year-select">
-              <option value="2020">Year</option>
+              <option value="">Year</option>
               <option value="2016">2016</option>
               <option value="2017">2017</option>
               <option value="2018">2018</option>
