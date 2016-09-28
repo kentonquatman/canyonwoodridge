@@ -33,7 +33,7 @@ var Site = window.Site || {};
     
     // FITVIDS
     
-    $('aside.video').fitVids();
+    $('.videos').fitVids();
     
     // FANCYBOX
     
