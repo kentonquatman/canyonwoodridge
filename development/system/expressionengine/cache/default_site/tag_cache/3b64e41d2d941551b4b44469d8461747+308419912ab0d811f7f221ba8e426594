@@ -1,6 +1,6 @@
-a:3:{s:4:"time";i:1475039170;s:3:"ttl";i:0;s:4:"data";s:2245:"<aside class="select-date">
+a:3:{s:4:"time";i:1475561419;s:3:"ttl";i:0;s:4:"data";s:2221:"<aside class="select-date">
         <h3>Select Date</h3>
-        <form action="{site_url}pricing-and-availability/calendar/" id="date-selection-form">
+        <form action="{site_url}reservations/calendar/" id="date-selection-form">
           <div class="date-select-box month-select">
             <select id="month-select">
               <option value="">Month</option>
@@ -60,7 +60,7 @@ a:3:{s:4:"time";i:1475039170;s:3:"ttl";i:0;s:4:"data";s:2245:"<aside class="sele
         </table>
         
         
-        <a class="button" href="http://canyonwoodridge.dev/pricing-and-availability/pricing/">More Info</a>
+        <a class="button" href="http://canyonwoodridge.dev/reservations/pricing/">More Info</a>
         
         
       </aside>";}

@@ -28,27 +28,36 @@
 .thumb-gallery {
   overflow: hidden;
   list-style: none;
-  margin: 0;
+  width: 102.5%;
+  margin: 0 0 0 -2.5%;
+  @include break-up($medium){
+    width: 101.75%;
+    margin-left: -1.75%;
+  }
+  @include break-up($medium){
+    width: 101.25%;
+    margin-left: -1.25%;
+  }
   li {
     @include float;
     @include font-size(10);
-    width: 48.75%;
+    width: 47.5%;
+    padding: .5em;
     margin: 0 0 2.5% 2.5%;
-    padding: .75em;
     background-color: $thumb-gallery-image-bg;
     border: 1px solid $thumb-gallery-border;
-    &:nth-child(odd){margin-left:0}
+    &:nth-child(2n+1){ clear: left }
     @include break-up($medium){
-      width: 32%;
-      margin: 0 0 2% 2%;
-      &:nth-child(odd){margin-left:2%}
-      &:nth-child(3n+1){margin-left:0}
+      width: 31.25%;
+      margin: 0 0 1.75% 1.75%;
+      &:nth-child(2n+1){ clear: none }
+      &:nth-child(3n+1){ clear: left }
     }
     @include break-up($large){
-      width: 23.5%;
-      margin: 0 0 2% 2%;
-      &:nth-child(3n+1){margin-left:2%}
-      &:nth-child(4n+1){margin-left:0}
+      width: 23.75%;
+      margin: 0 0 1.25% 1.25%;
+      &:nth-child(3n+1){ clear: none }
+      &:nth-child(4n+1){ clear: both }
     }
     a {
       display: block;

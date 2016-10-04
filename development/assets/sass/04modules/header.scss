@@ -59,7 +59,8 @@ header {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    &:hover {
+    &:hover,
+    &:focus  {
       background-position: 0 -1em;
       color: $nav-toggle-text;
     }

@@ -32,15 +32,19 @@ header {
       padding: 0;
       border-top: none;
     }
+    @include break-up ($x-large){
+      margin-top: 2.9em;
+    }
     li {
       @include inline-block(baseline);
-      @include font-size(16);
+      @include font-size(18);
       position: relative;
-      margin-left: .25em;
+      margin-left: .5em;
       padding-bottom: .75em;
       text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
       @include break-up($x-large){
-        @include font-size(18);
+        @include font-size(21);
         margin-left: .5em;
         -webkit-font-smoothing: antialiased;
       }
@@ -49,7 +53,7 @@ header {
       }
       &:before {
         content: $vertical-bar;
-        margin-right: .25em;
+        margin-right: .5em;
         color: $nav-divider;
         @include break-up($x-large){
           margin-right: .375em;

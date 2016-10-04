@@ -1,0 +1,58 @@
+/**************************************************
+ TESTIMONIALS STYLES
+**************************************************/
+
+.testimonials-list {
+  margin: 0;
+  list-style: none;
+  li {
+    margin: 0 0 3em;
+    padding-top: 3em;
+    border-top: 1px solid $border-color;
+    line-height: normal;
+    @include font-size(10);
+    &:before { content: none !important }
+    &:first-child {
+      border-top: none;
+      padding-top: 1em;
+    }
+  }
+  blockquote {
+    position: relative;
+    margin-bottom: 1em;
+    padding-left: 1.25em;
+    font-style: italic;
+    @include font-size(16);
+    @include break-up($small){
+      @include font-size(18);
+    }
+    @include break-up($medium){
+      @include font-size(16);
+    }
+    @include break-up($large){
+      @include font-size(18);
+    }
+    & * {
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      content: "\201C";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: -.25em;
+      color: $cream;
+      @include font-size(120);
+    }
+  }
+  h4 {
+    @include font-size(16);
+    margin: 0;
+    padding-left: 1.25em;
+    color: $lt-gray;
+    &:before {
+      content: "\2014\0020";
+    }
+  }
+}
