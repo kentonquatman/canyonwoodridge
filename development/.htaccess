@@ -4,7 +4,7 @@
   
   # 301 redirect old URLs for SEO
   
-  # RewriteRule ^faq.*$ http://www.canyonwoodridge.com/index.php/venue/faq/ [R=301,L]
+  # RewriteRule ^faq.*$ http://www.canyonwoodridge.com/index.php/about/faq/ [R=301,L]
   # RewriteRule ^pricing-and-availability/(.*)$ http://www.canyonwoodridge.com/index.php/reservations/$1 [R=301,L]
   
   RewriteBase /

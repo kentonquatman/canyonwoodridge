@@ -28,24 +28,24 @@ header {
     @include break-up($large){
       @include float(right);
       text-align: right;
-      margin-top: 3.3em;
+      margin-top: 3.2em;
       padding: 0;
       border-top: none;
     }
-    @include break-up ($x-large){
-      margin-top: 2.9em;
+    @include break-up($x-large){
+      margin-top: 3em;
     }
     li {
       @include inline-block(baseline);
-      @include font-size(18);
+      @include font-size(16);
       position: relative;
       margin-left: .5em;
       padding-bottom: .75em;
       text-transform: uppercase;
       -webkit-font-smoothing: antialiased;
       @include break-up($x-large){
-        @include font-size(21);
-        margin-left: .5em;
+        @include font-size(18);
+        margin-left: .625em;
         -webkit-font-smoothing: antialiased;
       }
       &:first-child {
@@ -56,7 +56,7 @@ header {
         margin-right: .5em;
         color: $nav-divider;
         @include break-up($x-large){
-          margin-right: .375em;
+          margin-right: .625em;
         }
       }
       &:first-child:before {
